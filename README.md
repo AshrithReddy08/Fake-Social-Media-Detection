@@ -10,7 +10,8 @@ Develop a lightweight system to identify fake profiles on social media platforms
 
 ---
 
-📂 Repository Structure
+📂 Repository Structure:
+
 features/: Contains scripts for feature extraction.
   word_parser.py: Extracts word-level features.
   keystroke_features.py: Extracts keystroke features like Key Hold Time (KHT) and Key Interval Time (KIT).
