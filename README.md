@@ -14,25 +14,34 @@ Develop a lightweight system to identify fake profiles on social media platforms
 
 features/: Contains scripts for feature extraction.
   word_parser.py: Extracts word-level features.
+  
   keystroke_features.py: Extracts keystroke features like Key Hold Time (KHT) and Key Interval Time (KIT).
   
 verifiers/: Includes algorithms for profile verification.
+
   template_generator.py: Processes keystroke data into templates.
+  
   verifier_library.py: Contains verifier algorithms:
     AbsoluteVerifier: Compares exact keystroke patterns.
     SimilarityVerifier: Assesses similarity between keystroke sequences.
     ITAD: Implements the Inter-Tap Action Duration method.
     
 fusion/: Implements fusion techniques to enhance detection accuracy.
+
   score_level_fusion.py: Combines scores from multiple verifiers using methods like mean, median, min, and max.
+  
   decision_level_fusion.py: Applies empirically set thresholds to determine profile authenticity.
   
 heatmap/: Generates heatmaps for visualizing verifier scores across user IDs.
+
   heatmap_generator.py: Creates heatmaps based on keystroke features and verifier scores.
   
 config.py: Configuration file to set experimental parameters:
+
   use_feature_selection: Enable or disable feature selection.
+  
   use_word_holder: Decide whether to use word-level features.
+  
   gender: Specify gender data to use (all, male, other).
 
 ---
