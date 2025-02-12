@@ -11,6 +11,7 @@ Develop a lightweight system to identify fake profiles on social media platforms
 ---
 
 📂 Repository Structure:
+```
 
 📦 social-network-fake-profile-detection
 │
@@ -37,7 +38,7 @@ Develop a lightweight system to identify fake profiles on social media platforms
 ├── 📝 LICENSE                # License information
 ├── 📝 README.md              # Project documentation and usage instructions
 
-
+```
 ---
 
 
