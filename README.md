@@ -12,39 +12,34 @@ Develop a lightweight system to identify fake profiles on social media platforms
 
 📂 Repository Structure:
 
-features/: Contains scripts for feature extraction.
-  word_parser.py: Extracts word-level features.
-  
-  keystroke_features.py: Extracts keystroke features like Key Hold Time (KHT) and Key Interval Time (KIT).
-  
-verifiers/: Includes algorithms for profile verification.
+📦 social-network-fake-profile-detection
+│
+├── 📁 features/              # Scripts for extracting key features
+│   ├── 📝 word_parser.py     # Extracts word-level features
+│   ├── 📝 keystroke_features.py  # Extracts keystroke-based authentication features
+│
+├── 📁 verifiers/             # Verification algorithms to detect fake profiles
+│   ├── 📝 template_generator.py  # Processes keystroke data into templates
+│   ├── 📝 verifier_library.py    # Contains various verifier algorithms
+│   ├── 📝 AbsoluteVerifier.py    # Exact keystroke pattern comparison
+│   ├── 📝 SimilarityVerifier.py  # Measures keystroke similarity
+│   ├── 📝 ITAD.py                # Implements the Inter-Tap Action Duration method
+│
+├── 📁 fusion/                # Enhances detection accuracy using multiple verification methods
+│   ├── 📝 score_level_fusion.py   # Combines multiple verification scores using statistical methods
+│   ├── 📝 decision_level_fusion.py  # Applies thresholds to determine profile authenticity
+│
+├── 📁 heatmap/               # Visualizations for detecting fake profiles
+│   ├── 📝 heatmap_generator.py  # Generates heatmaps from keystroke dynamics
+│
+├── 📝 config.py              # Configuration settings for feature selection, word holders, and gender-based filtering
+├── 📝 requirements.txt       # Dependencies and libraries required for the project
+├── 📝 LICENSE                # License information
+├── 📝 README.md              # Project documentation and usage instructions
 
-  template_generator.py: Processes keystroke data into templates.
-  
-  verifier_library.py: Contains verifier algorithms:
-    AbsoluteVerifier: Compares exact keystroke patterns.
-    SimilarityVerifier: Assesses similarity between keystroke sequences.
-    ITAD: Implements the Inter-Tap Action Duration method.
-    
-fusion/: Implements fusion techniques to enhance detection accuracy.
-
-  score_level_fusion.py: Combines scores from multiple verifiers using methods like mean, median, min, and max.
-  
-  decision_level_fusion.py: Applies empirically set thresholds to determine profile authenticity.
-  
-heatmap/: Generates heatmaps for visualizing verifier scores across user IDs.
-
-  heatmap_generator.py: Creates heatmaps based on keystroke features and verifier scores.
-  
-config.py: Configuration file to set experimental parameters:
-
-  use_feature_selection: Enable or disable feature selection.
-  
-  use_word_holder: Decide whether to use word-level features.
-  
-  gender: Specify gender data to use (all, male, other).
 
 ---
+
 
 ## 🔍 Overview of the Key Parts of the Code Base
 
