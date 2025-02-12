@@ -19,7 +19,7 @@ Develop a lightweight system to identify fake profiles on social media platforms
 │   ├── 📝 word_parser.py     # Extracts word-level features
 │   ├── 📝 keystroke_features.py  # Extracts keystroke-based authentication features
 │
-├── 📁 verifiers/             # Verification algorithms to detect fake profiles
+├── 📁 classifiers/             # Verification algorithms to detect fake profiles
 │   ├── 📝 template_generator.py  # Processes keystroke data into templates
 │   ├── 📝 verifier_library.py    # Contains various verifier algorithms
 │   ├── 📝 AbsoluteVerifier.py    # Exact keystroke pattern comparison
